@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  backend:
+    container_name: nestjs-backend
+    build:
+      context: ./backend
+      dockerfile: backend.Dockerfile
+    # volumes:
+    #   - ./backend:/app/backend
+    ports:
+      - "5000:5000"
+    environment:
+      MONGO_DB_URI: mongodb+srv://user_one:Gr7sR680tk6RvjIG@cluster0.vdbve6h.mongodb.net/DB-A?retryWrites=true&w=majority
+      OPEN_AI_API_KEY:
+
+  frontend:
+    container_name: nextjs-frontend
+    build:
+      context: ./frontend
+      dockerfile: frontend.Dockerfile
+    # volumes:
+    #   - ./frontend:/app/frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_STRIPE_PUBLIC_KEY: pk_test_51NIyyWJDspiXkycktKdtGCbJP48jGxa7JP6Fq1k0aVXoePmUsBvbllTfCnFF9PbqglwfOmYmv4s1J0hFOWzKDBq3002Tu0Ckw2
+      NEXT_PUBLIC_BACKEND_URI: http://localhost:5000
+      NEXT_PUBLIC_PRODUCT_ID: price_1OL02eJDspiXkyckYaMv3lRQ
