@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import Loader from '../loader';
 
 export default function BaseForm({ setReportLength, setReports, loading, setLoading, setFormSubmitted, setQueryId }: any) {
+    
     const initialValues = {
         input_text: '',
         description: '',
@@ -59,6 +60,18 @@ export default function BaseForm({ setReportLength, setReports, loading, setLoad
             input_text,
             description
         };
+        console.log('Selected Values:', {
+            input_text,
+            description,
+            age: ageRange, // Corrected variable name
+            education_level,
+            income_level,
+            gender,
+            marital_status,
+            area_type,
+        });
+
+
         // form is submitted
         setSubmitting(false);
 
@@ -110,7 +123,7 @@ export default function BaseForm({ setReportLength, setReports, loading, setLoad
                             <div className='flex justify-center mt-10'>
                                 <img src='/assets/right-arrow.png' width={50} height={50} />
                             </div>
-                            
+
                         </div>
                     </div>
                     <div className="w-full rounded-2xl lg:w-1/2 bg-white lg:rounded-r-2xl lg:rounded-l-none relative">

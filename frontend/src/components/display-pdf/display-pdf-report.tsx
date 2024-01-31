@@ -1,3 +1,5 @@
+// DisplayPdfReport.tsx
+
 import React from 'react';
 import {
     Document,
@@ -5,19 +7,18 @@ import {
     Text,
     View,
     StyleSheet,
-    PDFViewer,
-  } from "@react-pdf/renderer";
+} from "@react-pdf/renderer";
 
-const DisplayPdfReport = ({report}:any) => {
+const DisplayPdfReport = ({ report }: any) => {
     const styles = StyleSheet.create({
         viewer: {
-            // width: window.innerWidth, 
+            // width: window.innerWidth,
             // height: window.innerHeight,
         },
         flexWrap: {
             display: 'flex',
-            // flexWrap: 'wrap',
-            flexDirection:"column",
+            flexWrap: 'wrap',
+            flexDirection: "column",
             marginLeft: '-4pt',
             marginRight: '-4pt',
         },
@@ -39,24 +40,24 @@ const DisplayPdfReport = ({report}:any) => {
             fontWeight: 'bold',
             marginBottom: '12pt',
         },
-        Text:{
-            maxWidth:"100%",
+        text: {
+            maxWidth: "100%",
             fontSize: '14pt',
         }
     });
 
-    return(
+    return (
         <View style={styles.viewer}>
             <View style={styles.flexWrap}>
                 <View style={styles.column}>
                     <View style={styles.roundedBox}>
-                        <View >Content</View>
-                        <Text style={styles.Text}>{report}</Text>
+                        <View>Content</View>
+                        <Text style={styles.text}>{report}</Text>
                     </View>
-                 </View>
-                 </View>
-                 </View>   
-    )
+                </View>
+            </View>
+        </View>
+    );
 }
 
 export default DisplayPdfReport;

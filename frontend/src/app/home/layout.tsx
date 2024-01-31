@@ -5,6 +5,7 @@ export default function HomePage({
   }) {
     return (
       <html lang="en">
+        <title>WhatThinksAI</title> 
         <body>
     <div className='flex flex-row h-full w-full'>
       <div>

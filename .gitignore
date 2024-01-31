@@ -4,3 +4,10 @@ frontend/node_modules
 frontend/.next
 .DS_Store
 package-lock.json
+frontend/.env
+frontend/.env.local
+frontend/package.json
+frontend/next.config.js
+backend/.env
+.gitignore
+backend/yarn.lock

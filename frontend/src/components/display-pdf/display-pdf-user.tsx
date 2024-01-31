@@ -1,3 +1,5 @@
+// DisplayPdfUser.tsx
+
 import React from 'react';
 import {
     Document,
@@ -5,7 +7,6 @@ import {
     Text,
     View,
     StyleSheet,
-    PDFViewer,
 } from "@react-pdf/renderer";
 
 const DisplayPdfUser = ({ user }: any) => {
@@ -13,13 +14,12 @@ const DisplayPdfUser = ({ user }: any) => {
 
     const styles = StyleSheet.create({
         viewer: {
-            // width: window.innerWidth, 
+            // width: window.innerWidth,
             // height: window.innerHeight,
         },
         flexWrap: {
             display: 'flex',
-            // flexWrap: 'wrap',
-            flexDirection:"column",
+            flexDirection: "column",
             marginLeft: '-4pt',
             marginRight: '-4pt',
         },
@@ -33,16 +33,14 @@ const DisplayPdfUser = ({ user }: any) => {
             width: '100%',
             borderRadius: '4pt',
             padding: '12pt',
-            // border: '1pt solid black', // Example border
-            // backgroundColor: "red"
         },
         title: {
             fontSize: '14pt',
             fontWeight: 'bold',
             marginBottom: '12pt',
         },
-        Text:{
-            maxWidth:"80%",
+        text: {
+            maxWidth: "80%",
             fontSize: '14pt',
         }
     });
@@ -54,12 +52,12 @@ const DisplayPdfUser = ({ user }: any) => {
                     <View style={styles.roundedBox}>
                         <View >User Information</View>
                         <View>
-                            <Text style={styles.Text} >First Name: {first_name}</Text>
-                            <Text style={styles.Text}>Last Name: {last_name}</Text>
-                            <Text style={styles.Text}>Age: {age}</Text>
-                            <Text style={styles.Text}>Gender: {gender}</Text>
-                            <Text style={styles.Text}>Marital Status: {marital_status}</Text>
-                            <Text style={styles.Text}>Location: {location}</Text>
+                            <Text style={styles.text} >First Name: {first_name}</Text>
+                            <Text style={styles.text}>Last Name: {last_name}</Text>
+                            <Text style={styles.text}>Age: {age}</Text>
+                            <Text style={styles.text}>Gender: {gender}</Text>
+                            <Text style={styles.text}>Marital Status: {marital_status}</Text>
+                            <Text style={styles.text}>Location: {location}</Text>
                         </View>
                     </View>
                 </View>
@@ -68,12 +66,12 @@ const DisplayPdfUser = ({ user }: any) => {
                         <View style={styles.roundedBox}>
                             <View >Additional Information</View>
                             <View>
-                                <Text style={styles.Text}>Income level: {income_level}</Text>
-                                <Text style={styles.Text}>Education Level: {education_level}</Text>
-                                <Text style={styles.Text}>Type of Area: {area_type}</Text>
-                                <Text style={styles.Text}>Employment Industry: {employment_industry}</Text>
-                                <Text style={styles.Text}>Children Amount: {children_amount}</Text>
-                                <Text style={styles.Text}>Hobbies: {hobbies}</Text>
+                                <Text style={styles.text}>Income level: {income_level}</Text>
+                                <Text style={styles.text}>Education Level: {education_level}</Text>
+                                <Text style={styles.text}>Type of Area: {area_type}</Text>
+                                <Text style={styles.text}>Employment Industry: {employment_industry}</Text>
+                                <Text style={styles.text}>Children Amount: {children_amount}</Text>
+                                <Text style={styles.text}>Hobbies: {hobbies}</Text>
                             </View>
                         </View>
                     </View>
